@@ -5,7 +5,7 @@ using UnityEngine;
 public class CanonRotationY : MonoBehaviour
 {
     Transform CanonFixed;
-    public Transform atesKismi;
+    public Transform ayakKismi;
     void Start()
     {
         
@@ -15,16 +15,16 @@ public class CanonRotationY : MonoBehaviour
     void Update()
     {
         //this.transform.rotation = Quaternion.Euler(this.transform.rotation.x, atesKismi.transform.rotation.y, this.transform.rotation.z);
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 45, 0), 0.01f);
+            ayakKismi.rotation = Quaternion.Lerp(ayakKismi.rotation, Quaternion.Euler(0, 45, 0), 0.005f);
 
         }
 
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, -45, 0), 0.01f);
+            ayakKismi.rotation = Quaternion.Lerp(ayakKismi.rotation, Quaternion.Euler(0, -45, 0), 0.005f);
 
         }
     }
